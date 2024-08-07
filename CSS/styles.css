@@ -187,3 +187,8 @@ form select {
 .user-management.active, .group-management.active, .role-management.active {
     display: block;
 }
+.navigationbar a.active {
+    background-color: #100B1D;
+    color: white;
+  }
+  

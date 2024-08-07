@@ -179,4 +179,21 @@ document.addEventListener('DOMContentLoaded', () => {
             target.classList.add('active');
         });
     });
+    function setActiveLink(page) {
+        const navLinks = document.querySelectorAll('.navigationbar .nav-link');
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('data-page') === page) {
+            link.classList.add('active');
+          }
+        });
+    }
+    setActiveLink('user-management');
+    const navLinks = document.querySelectorAll('.navigationbar a');
+    navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      const page = link.getAttribute('data-page');
+      setActiveLink(page);
+    });
+  });
 });
